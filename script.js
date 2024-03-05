@@ -5,7 +5,7 @@ let selectString = stringArr[Math.floor(Math.random()*stringArr.length)];
 let selectStringArr = selectString.split("");
 
 function randomString(){
-    let stringArr = ["Story of Car Inspect",
+    let stringArr = ["Story of Car Inspect","Story of Used Car",
     "Story of Python", "Story of WEB"]
     let selectString = stringArr[Math.floor(Math.random()*stringArr.length)];
     let selectStringArr = selectString.split("");
@@ -41,3 +41,20 @@ function blink(){
 
 }
 setInterval(blink, 500);
+
+let observer = new IntersectionObserver((e)=>{
+    e.forEach((box)=>{
+        if(box.isIntersecting){
+            box.target.style.opacity = 1;
+        }else{
+            box.target.style.opacity = 0;
+        }
+
+    })
+})
+
+let div = document.querySelectorAll('div')
+observer.observe(div[0])
+observer.observe(div[1])
+observer.observe(div[2])
+observer.observe(div[3])

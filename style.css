@@ -5,7 +5,16 @@
 }
 
 body{
-    background-color: darkslateblue;
+    background-color: black;
+    height: 3000px;
+}
+
+.gyang{
+    margin-top: 1000px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .wrap{
